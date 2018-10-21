@@ -37,11 +37,11 @@
 
 #define CRYPTONOTE_DNS_TIMEOUT_MS                       20000
 
-#define CRYPTONOTE_MAX_BLOCK_NUMBER                     500000000
-#define CRYPTONOTE_MAX_BLOCK_SIZE                       500000000  // block header blob limit, never used!
+#define CRYPTONOTE_MAX_BLOCK_NUMBER                     4294967295
+#define CRYPTONOTE_MAX_BLOCK_SIZE                       4294967295  // block header blob limit, never used!
 #define CRYPTONOTE_GETBLOCKTEMPLATE_MAX_BLOCK_SIZE	    196608 //size of block (bytes) that is the maximum that miners will produce
 #define CRYPTONOTE_MAX_TX_SIZE                          1000000000
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  = 80;
+
 #define CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW            120
 #define CURRENT_TRANSACTION_VERSION                     2
 #define MIN_TRANSACTION_VERSION							            2
@@ -58,11 +58,12 @@ const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  = 80;
 #define EMISSION_SPEED_FACTOR                           24
 #define FINAL_SUBSIDY                                   ((uint64_t)0) // x * pow(10, 9)
 #define GENESIS_BLOCK_REWARD                            ((uint64_t)0) 
-#define PREMINED_COINS									((uint64_t)4000000000000000) // 4% premine
 
-#define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
+
+#define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 127
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       64000    // 240kB
 #define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          600
+#define CRYPTONOTE_DISPLAY_DECIMAL_POINT                12
 // COIN - number of smallest units in one coin
 #define COIN                                            ((uint64_t)1000000000) // pow(10, 9)
 
@@ -73,12 +74,12 @@ const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  = 80;
 #define ORPHANED_BLOCKS_MAX_COUNT                       100
 
 #define DIFFICULTY_TARGET                               30  // seconds
-#define DIFFICULTY_WINDOW                               17  // blocks
+#define DIFFICULTY_WINDOW                               120  // blocks
 #define DIFFICULTY_LAG                                  0   // !!!
 #define DIFFICULTY_CUT                                  60   // timestamps to cut after sorting
 #define DIFFICULTY_BLOCKS_COUNT                         DIFFICULTY_WINDOW + DIFFICULTY_LAG
 
-#define DIFFICULTY_WINDOW_V2							60
+#define DIFFICULTY_WINDOW_V2						              	60
 #define DIFFICULTY_CUT_V2                               6
 #define DIFFICULTY_BLOCKS_COUNT_V2                      DIFFICULTY_WINDOW_V2 + 1
 
@@ -129,8 +130,8 @@ const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  = 80;
 
 #define THREAD_STACK_SIZE                               5 * 1024 * 1024
 
-#define DEFAULT_MIXIN                                   14     // default & minimum mixin allowed
-#define MAX_MIXIN                                       240    
+#define DEFAULT_MIXIN                                   64     // default & minimum mixin allowed
+#define MAX_MIXIN                                       1024    
 
 #define TRANSACTION_SIZE_LIMIT                          ((uint64_t) ((CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE * 110 / 100) - CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE))
 #define BLOCK_SIZE_GROWTH_FAVORED_ZONE                  ((uint64_t) (CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE * 4))
