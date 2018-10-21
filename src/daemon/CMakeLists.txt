@@ -108,8 +108,3 @@ target_link_libraries(daemon
 set_property(TARGET daemon
   PROPERTY
     OUTPUT_NAME "edollard")
-<<<<<<< HEAD
-install(TARGETS daemon DESTINATION bin)
-=======
-install(TARGETS daemon DESTINATION bin)
->>>>>>> 4a31e9dbe0b54e810999c98eeef00636edf9f5ab
