@@ -54,7 +54,7 @@ const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  = 80;
 #define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V2            12
 
 // MONEY_SUPPLY - total number coins to be generated
-#define MONEY_SUPPLY                                    ((uint64_t)100000000000000000) // 100 millions coins
+#define MONEY_SUPPLY                                    ((uint64_t)(-1))
 #define EMISSION_SPEED_FACTOR                           30
 #define FINAL_SUBSIDY                                   ((uint64_t)0) // x * pow(10, 9)
 #define GENESIS_BLOCK_REWARD                            ((uint64_t)0) 
@@ -145,22 +145,18 @@ namespace config
   uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000); // pow(10, 5)
   std::string const P2P_REMOTE_DEBUG_TRUSTED_PUB_KEY = "0000000000000000000000000000000000000000000000000000000000000000";
 
-  uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x628c9;  // aksn
-  uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x8a8c9; // akss
-  uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x3a6849; // aksN
+  uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 80;  
+  uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 81; 
+  uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 79; 
   uint16_t const P2P_DEFAULT_PORT = 4095;
-  uint16_t const RPC_DEFAULT_PORT = 4095;
+  uint16_t const RPC_DEFAULT_PORT = 4096;
 
   boost::uuids::uuid const NETWORK_ID = { {
       0x08, 0x03, 0x03, 0xd1, 0xc1, 0xfc, 0x1c, 0x83, 0x31, 0x13, 0xd8, 0x13, 0x1d, 0x31, 0x18, 0x31
     } }; // Bender's nightmare
-  std::string const GENESIS_TX = "";
+  std::string const GENESIS_TX = "011201ff00011e026bc5c7db8a664f652d78adb587ac4d759c6757258b64ef9cba3c0354e64fb2e42101abca6a39c561d0897be183eb0143990eba201aa7d2c652ab0555d28bb4b70728";
   uint32_t const GENESIS_NONCE = 10000;
 
-  
-  }
-<<<<<<< HEAD
+   }
 }
-=======
-}
->>>>>>> 4a31e9dbe0b54e810999c98eeef00636edf9f5ab
+
