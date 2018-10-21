@@ -55,7 +55,7 @@ const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  = 80;
 
 // MONEY_SUPPLY - total number coins to be generated
 #define MONEY_SUPPLY                                    ((uint64_t)(-1))
-#define EMISSION_SPEED_FACTOR                           30
+#define EMISSION_SPEED_FACTOR                           24
 #define FINAL_SUBSIDY                                   ((uint64_t)0) // x * pow(10, 9)
 #define GENESIS_BLOCK_REWARD                            ((uint64_t)0) 
 #define PREMINED_COINS									((uint64_t)4000000000000000) // 4% premine
@@ -63,7 +63,6 @@ const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  = 80;
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       64000    // 240kB
 #define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          600
-#define CRYPTONOTE_DISPLAY_DECIMAL_POINT                6
 // COIN - number of smallest units in one coin
 #define COIN                                            ((uint64_t)1000000000) // pow(10, 9)
 
